@@ -58,7 +58,7 @@ console.log(result); // 21
 **/
 
 function simpleAdding(a) {
-<<<<<<< HEAD
+
 	
 	var answer = 0;
 	for (i=0 ; i <= a; i++) {
@@ -68,22 +68,4 @@ function simpleAdding(a) {
 	return answer;
  }
 //the answer to the first one worked for all of them!!!
-=======
-  var sum = 0;
-  for (var i =0; i <= a ; i++) {
-    if (a === undefined) {
-    	return 0;
-    }
-    else if (typeof a !== "number") {
-    	return 0;
-    }
-    else {
-    	sum += i;
-    }
-  }
-  return sum;
-}
 
-var result = simpleAdding("hello");
-console.log(result);
->>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb

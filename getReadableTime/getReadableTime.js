@@ -89,21 +89,4 @@ function getReadableTime(minutes) {
 
 		return clock;
 	}	
-=======
- 
 
-
-function getReadableTime(minutes) {
-	var object = {};
-	var totalHour = Math.floor(minutes/60);
-	var dayforObject = Math.floor(totalHour/24);
-	var remainingHour =totalHour - (dayforObject*24);
-	var minutesforObject= minutes % 60;
-	object.hour = remainingHour;
-	object.minutes = minutesforObject;
-	object.day = dayforObject;
-	console.log(object);
-}
-
-getReadableTime(120);
->>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb

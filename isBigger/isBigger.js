@@ -37,7 +37,6 @@ console.log(result) // -1
 
 **/
 
-<<<<<<< HEAD
 
 
 function isBigger(a, b) {
@@ -51,23 +50,4 @@ function isBigger(a, b) {
 		return 0;
 	} 
 }
-=======
-function isBigger (a,b) {
-	if (typeof a !== "number" || typeof b !=="number"){
-		return -1;
-	}
-	else {
-		if (a > b){
-			return true;
-		}
-		else if (a < b) {
-			return false;
-		}	
-		else {
-			return 0;
-		}
-	}
-}
 
-isBigger(3,"hello");
->>>>>>> 9410a70a0a1cbbbd1bcda74091881ba2a97a51cb
