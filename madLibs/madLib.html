@@ -5,6 +5,7 @@
 	 	<head>
 	  		<meta charset="utf-8" />
 	  		<title>"My Mad Lib"</title>
+	  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	 	</head>
 	 	
 	 	<body>
@@ -14,15 +15,27 @@
 			  	<li>Adjective: <input type="text" id="adjective">
 			  	<li>A Person Name: <input type="text" id="person">
 			 </ul>
-			 <button id="lib-button">Lib it!</button>
+			 <button onclick="makeMadLib()" id="lib-button">Lib it!</button>
 			  
-			 <div id="story"></div>  
+			 <div id="story"></div>
+
+			 <script type="text/javascript">
+			 function makeMadLib(){
+			 	var nounLib = document.getElementById('noun').value;
+			 	var adjectiveLib = document.getElementById('adjective').value;
+			 	var nameLib = document.getElementById('person').value;
+            	$('#story').append("<p>" + nameLib + " really likes " + adjectiveLib + " " + nounLib + "</p>");
+			}
+
+           </script> 
 		</body>
 	</html>
+	
+
 	
 <!-- 
 1) Add a script tag to the bottom of the page for your code.
 2) Add an event listener to the button so that it calls a makeMadLib function when clicked.
 3)In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Laura really likes pink cucumbers.") -->
 
-<!-- Bonus: Make an object with the list elements as keys and the inputs as values.  -->
+<!-- Bonus: Make an object with the list elements as keys and the inputs as values.  --> 
