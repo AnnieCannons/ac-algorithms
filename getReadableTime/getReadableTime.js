@@ -38,7 +38,7 @@ console.log(result) // -1
 
 **/
 
-<<<<<<< HEAD
+
 //without bonus:
 
 function getReadableTime(minutes) {
