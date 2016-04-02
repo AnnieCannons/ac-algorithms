@@ -7,6 +7,11 @@ Hint: You may not need to check numbers up to num to check for primeness.
 
 */
 
+//identify all numbers between 1 and 2^16
+//check to see if the remainder is = 0 when each is divided by any numbr between 2^16
+//if remainder is ever =0, return false
+//if remainder is never= 0, returnt true
+
 /**
 
 Examples:
@@ -32,5 +37,17 @@ console.log(result) // false
 **/
 
 function isPrime(num) {
-	// Your code
+	//return false if number is 1 or less
+	if (num <== 1) {
+      return false;
+    }
+	//check to see if the remainder is = 0 when num is divided by 
+	//any number between 2 and num
+	for(i=2; i<num; i++) {
+		if (num%i === 0) {
+			//if remainder is ever =0, return false
+			return false;
+		} 
+	} 
+	return true;
 }
