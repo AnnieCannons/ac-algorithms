@@ -20,11 +20,26 @@ console.log(result) // "44"
 var result = dashInsert("0");
 console.log(result) // "0"
 
-var result = isBigger("13");
+var result = dashInsert("13");
 console.log(result) // "1-3"
 
 **/
 
 function dashInsert(str) {
-	// Your code
+	//create a new string to hold output
+	var newStr = "";
+	// convert to string using base ten
+	var strUp = str.toString().split("");
+	//locate all conseutive odd numbers
+	for (i=0; i<strUp.length; i++) {
+	//if trueinsert a dash
+      if ((strUp[i] % 2) === 1 && (strUp[i+1]% 2) === 1) {
+			newStr += strUp[i] + "-";
+		} else {
+			newStr += strUp[i];
+		}
+	
+	}
+  //return new string
+	return newStr;
 }
