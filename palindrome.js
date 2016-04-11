@@ -26,6 +26,18 @@
 //palindrome("0_0 (: /-\ :) 0-0") should return true.
 
 function palindrome(str) {
-	//your code here
+	//remove specials:
+    //set cleaned str to lowercase
+	var stringy = str.replace(/\W|_/g, "").toLowerCase();
+	//set variable as reverse of that array
+		var stringyBack = stringy.split("").reverse().join("");
+	//compare whether the two arrays are the same.  if same, return true; if different, return false
+		if (stringyBack === stringy) {
+		  console.log(true);	
+          return true;
+		} else {
+          console.log(false);
+			return false;
+		}
 }
 
