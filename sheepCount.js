@@ -50,12 +50,12 @@ function sheepCount(N) {
 	var seven = false;
 	var eight = false;
 	var nine = false;
-	//if n=0, return "INSOMNIA"
-	if (N <== 0) {
+	//if n=0 or less, product will never get right digits, return "INSOMNIA"
+	if (N <= 0) {
 		return "INSOMNIA";
 	}
-	// contianing loop for sequential products
-	for (i = 1; i< 100 ; i++) {
+	// containing loop for sequential products
+	for (i = 1; i< 1000 ; i++) {
 		var product = N*i;
 		//split each product into an array of strings to check
 		var prodArray = product.toString().split("");
