@@ -38,5 +38,69 @@ console.log(sheepCount(11)) //110
 */
 
 function sheepCount(N) {
-	//your code
+
+	//create containers for status of each number
+	var zero = false;
+	var one = false;
+	var two = false;
+	var three = false;
+	var four = false;
+	var five = false;
+	var six = false;
+	var seven = false;
+	var eight = false;
+	var nine = false;
+	//if n=0, return "INSOMNIA"
+	if (N <== 0) {
+		return "INSOMNIA";
+	}
+	// contianing loop for sequential products
+	for (i = 1; i< 100 ; i++) {
+		var product = N*i;
+		//split each product into an array of strings to check
+		var prodArray = product.toString().split("");
+		//loop over digits to identify whether each 1-9 digit is present, save true value for those that are
+		for (j=0; j< prodArray.length; j++){
+			switch (prodArray[j]) {
+				case '0':
+					var zero= true;
+					break;
+				case '1':
+					var one = true;
+					break;
+				case '2':
+					var two = true;
+					break;
+				case '3':
+					var three = true;
+					break;
+				case '4':
+					var four = true;
+					break;
+				case '5':
+					var five = true;
+					break;
+				case '6':
+					var six = true;
+					break;
+				case '7':
+					var seven = true;
+					break;
+				case '8':
+					var eight = true;
+					break;
+				case '9':
+					var nine = true;
+					break;							
+				case undefined: 
+					break;
+				default:
+					break;	
+			}
+		//at the end of the loop, check if all numbers are true.  if true, return product variable
+		if (zero == true && one == true && two == true && three == true && four == true && five == true && six  == true && seven == true && eight == true && nine == true)	 {
+			return product;
+			}
+		}
+	}
 }
