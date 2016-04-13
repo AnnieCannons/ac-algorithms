@@ -38,7 +38,7 @@ console.log(result) // false
 
 function isPrime(num) {
 	//return false if number is 1 or less
-	if (num <== 1) {
+	if (num <= 1) {
       return false;
     }
 	//check to see if the remainder is = 0 when num is divided by 
