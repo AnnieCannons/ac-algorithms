@@ -22,45 +22,34 @@ care of it.
 */
 
 function getPrimes(num) {
-    //eliminate sub prime and negative numbers
-    if (num <= 1) {
-      alert("Your number must be larger than 3! Input a new number.");
-    }	
-  
     
-	var isPrime = function(num) {
-      if (num <= 1) {
+	var isPrime = function(x) {
+      if (x < 2) {
       return false;
-    }
+      }
 	//check to see if the remainder is = 0 when num is divided by 
 	//any number between 2 and num
-	for(i=2; i<num; i++) {
-		if (num%i === 0) {
+		for (i = 2; i < x; i++) {
+			if (x % i === 0) {
 			//if remainder is ever =0, return false
-			return false;
+				return false;
+			} 
 		} 
-	} 
 	return true;
     };
-    //create container for all facotrs and prime factors of num
-    var allFactors = [];
+    //create container for prime factors of num
     var primeFactors = [];
 	
-    for(i=2; i<num; i++) {
-    //add factors to empty array	
-		if (num%i === 0) {
-			allFactors.push(i);
+    for (j = 2; j < num; j++) {
+    //test if each i is a factor of num	
+		if (num % j === 0) {
+          //test each factor to see if it's prime
+			if (isPrime(j) === true) {
+			  //if factor is prime, push to container	
+              primeFactors.push(j);
+			} 
 		} 
-	}	
-	//loop over	allFactors array to check for prime numbers
-    
-  for (j=0; j<allFactors.length ; j++) {
-   if (isPrime(allFactors[j]) === true) {
-     primeFactors.push(allFactors[j]);
-   } 
-    }
-      if (primeFactors.length > 0) {
-        console.log(primeFactors);
-      }
-    
+	}
+
+  console.log(primeFactors);
 }
