@@ -21,6 +21,18 @@ Hint: If the input number is prime you should get the number as the solution. Yo
 care of it.
 */
 
-function getPrimes() {
-	// your code
+function getPrimes(num) {
+	//create container for prime factors of num
+	var primeFactors = [];
+	//eliminate small prime and negative numbers
+	if (num <= 1) {
+      alert("Your number must be larger than 3! Input a new number.");
+    }
+    for(i=2; i<num; i++) {
+    //add factors to empty array	
+		if (num%i === 0) {
+			primeFactors.push(i);
+		} 
+	}	
+	console.log(primeFactors);	
 }
