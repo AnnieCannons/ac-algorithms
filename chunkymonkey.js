@@ -16,8 +16,17 @@
 
 
 function chunkArrayInGroups(arr, size) {
-  // Break it up.
-  return arr;
+  //create container for new 2D array
+  var chunks = [];
+  //place spliced values into that array
+  	for (var i = 0; i< arr.length; i++) {
+  		chunks.push(arr.slice(arr.length-size, arr.length));
+      	//remove spliced values from origial array
+      	for (var j=1; j<=size; j++) {
+      		arr.pop();
+		}  
+	}
+  return chunks;
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);

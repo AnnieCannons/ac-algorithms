@@ -16,7 +16,19 @@
 //3) Array.join() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
 function performReplace(str, before, after) {
-  //your code here
+  var afterI = after;
+  //reset after to include any uppercase elements of before
+  if (before.charAt(0) === before.charAt(0).toUpperCase()) {
+  	afterI = after.replace(after.charAt(0), after.charAt(0).toUpperCase());
+  }
+  //reset after to include any lowercase elements of before
+  if (before.charAt(0) === before.charAt(0).toLowerCase()) {
+  	afterI = after.replace(after.charAt(0), after.charAt(0).toLowerCase());
+  }
+  //replacements of befores with afters in string
+  result = str.replace(before, afterI);
+  console.log(result);
+  return result;
 }
 
 performReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
