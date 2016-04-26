@@ -20,6 +20,18 @@
 
 
 function findLongestWord(str) {
-  //your code here
+  //input is a string
+  //split str into array of strings of words and set that array as a variable
+  var newArray = str.split(" ");
+  //create array to hold length of each word in array of str's words
+  var numArray = [];
+  //assess length of each word item in that array and push into a new array
+  for (var i=0; i<newArray.length; i++) {
+  	numArray.push(newArray[i].length);
+  }
+  //locate and store (or simply return) the maximum length
+  var result = Math.max(...numArray);
+  //output is a number that reflects the length of the longest string
+  return result;
 }
 
