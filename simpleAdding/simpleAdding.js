@@ -47,6 +47,9 @@ console.log(result); // 21
 **/
 
 function simpleAdding(a) {
-	//Code here
-
+	for(var i=0; i<=a; i++){
+		sum += i
+		sum= sum + i 
+	}
+	
 }

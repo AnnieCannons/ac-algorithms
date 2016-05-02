@@ -34,6 +34,6 @@ console.log(result) // "ghimmnorstyy"
 **/
 
 function alphabetSoup(str) {
-	//Your code here
+	
 	
 }
