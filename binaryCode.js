@@ -13,7 +13,19 @@
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 function binaryCode(str) {
-  
+  //input string containing binary code for letters separated by spaces
+  //place code blocks from str into an array
+  var container = str.split(" ");
+  //create container for letters
+  var sentence = [];
+  //convert each binary value in array to letter in sentence array
+  for (var i=0; i<container.length; i++) {
+  	sentence.push(String.fromCharCode(parseInt(container[i],2)));
+  	 }
+  //combine the letters into a word
+  sentence = sentence.join("");
+  //output a string of words
+  console.log(sentence);
 }
 
 binaryCode("01000011 01101111 01100100 01101001 01101110 01100111 00100000 01101001 01110011 00100000 01110100 01101000 01100101 00100000 01100010 01100101 01110011 01110100 00101110");
