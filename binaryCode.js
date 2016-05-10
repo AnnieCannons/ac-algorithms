@@ -13,6 +13,7 @@
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 function binaryCode(str) {
+<<<<<<< HEAD
   //input string containing binary code for letters separated by spaces
   //place code blocks from str into an array
   var container = str.split(" ");
@@ -26,6 +27,8 @@ function binaryCode(str) {
   sentence = sentence.join("");
   //output a string of words
   console.log(sentence);
+=======
+>>>>>>> c86005dc9da4c58d339cc56ec7692a6b13440e04
 }
 
 binaryCode("01000011 01101111 01100100 01101001 01101110 01100111 00100000 01101001 01110011 00100000 01110100 01101000 01100101 00100000 01100010 01100101 01110011 01110100 00101110");
