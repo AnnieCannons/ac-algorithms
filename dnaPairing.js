@@ -11,7 +11,28 @@
 //The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
 function pairElement(str) {
-  //your code here
+  //create containers //split str into array
+  var strArray = str.split("");
+  var paired = [];
+  //loop over str array to add base pair and populate new array 
+  for (i=0; i < strArray.length; i++) {
+  	switch (strArray[i]) {
+  		case A:
+  			paired.push(["A", "T"]);
+  			break;
+  		case T:
+  			paired.push(["T", "A"]);
+  			break;
+  		case G:
+  			paired.push(["G", "C"]);
+  			break;
+  		case C:
+  			paired.push(["C", "G"]);
+  			break;
+  	}
+  }
+  //output new array
+  	return paired;
 }
 
 pairElement("GCG");
