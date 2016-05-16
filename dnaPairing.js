@@ -17,16 +17,16 @@ function pairElement(str) {
   //loop over str array to add base pair and populate new array 
   for (i=0; i < strArray.length; i++) {
   	switch (strArray[i]) {
-  		case A:
+  		case "A":
   			paired.push(["A", "T"]);
   			break;
-  		case T:
+  		case "T":
   			paired.push(["T", "A"]);
   			break;
-  		case G:
+  		case "G":
   			paired.push(["G", "C"]);
   			break;
-  		case C:
+  		case "C":
   			paired.push(["C", "G"]);
   			break;
   	}
