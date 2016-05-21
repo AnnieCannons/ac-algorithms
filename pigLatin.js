@@ -8,10 +8,28 @@
 
 
 function translatePigLatin(str) {
-  //your code here
+  //split input string into array of letters
+   var array = str.split("");
+    //check first letter from array for vowel state 
+    switch (array[0]) {
+   	//if vowel, just add "way to end"
+      case "a":
+   	  case "e":
+   	  case "i":
+   	  case "o":
+   	  case "u":
+   		array.push("way");
+   		break;
+   	//if consonant, move first letter to end and add "ay"
+      default:
+   		var first = array.shift();
+   		array.push(first + "ay");	
+   }
+   //rejoin array as string
+   var result = array.join("");
+   console.log(result);
+   return result;
 }
-
-translatePigLatin("consonant");
 
 // TEST CASES
 // translatePigLatin("california") should return "aliforniacay".
