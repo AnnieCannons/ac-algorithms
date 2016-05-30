@@ -8,10 +8,24 @@
 //Here are some helpful links:
 
 //Array.reduce()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-
+//input is a collection of array arguments
 function uniteUnique(arr) {
-  //your code here
+  //create result container
+  var result = [];
+  //for each number in array, check if element is present in result array.
+  for (var i=0; i< arguments.length; i++){
+     var holder = arguments[i];
+    for (var j= 0; j< holder.length; j++) {
+      
+     if (result.indexOf(holder[j]) === -1) {
+  		//if not present, push to new array
+  		result.push(holder[j]);
+  	} 
+  }
 }
+  return result;
+}
+
 
 
 //TEST CASES
