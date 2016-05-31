@@ -15,7 +15,14 @@
 function orbitalPeriod(arr) {
   var GM = 398600.4418;
   var earthRadius = 6367.4447;
-  //your code here
+  //create container for orbit semi-major axis(a)
+  var semiM = earthRadius + arr[0].avgAlt;
+  //cube (a), divide by GM(mu), and take square root,multiply that result by 2pi
+  var resultA = (Math.pow(semiM, 3))/GM;
+  var resultB = Math.pow((resultA), 0.5);
+  var result = Math.round((2*Math.PI)* resultB);
+  //announce orbital period
+  console.log([{name: arr[0].name, orbitalPeriod: result}]);
 }
 
 orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
