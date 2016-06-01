@@ -31,14 +31,9 @@ function convertHTML(str) {
   		  break;
 
   	}
-  // &colon;&rpar;
-  //if & - &amp;
-  //if < - &lt;
-  //if > - &gt;
-  //if " -  &quot;
-  //if ' - &apos;
+ 
   }
-  result = result.join("")
+  result = result.join("");
   return result;
 }
 
