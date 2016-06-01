@@ -7,8 +7,39 @@
 
 
 function convertHTML(str) {
+  var tester = str.split('');
+  var result = [];
+  for (var i =0; i < tester.length; i++) {
+  	switch (tester[i]) {
+  		case "&":
+  		 result.push("&amp;");
+  		 break;
+  		case "<": 
+  		result.push("&lt;");
+  		 break;
+  		case ">": 
+  		result.push("&gt;");
+  		 break;
+  		case '"':  
+  		result.push("&quot;");
+  		 break;
+  		case "'":
+  		 result.push("&apos;");
+  		 break;
+  		default:
+  		 result.push(tester[i]);
+  		  break;
+
+  	}
   // &colon;&rpar;
-  return str;
+  //if & - &amp;
+  //if < - &lt;
+  //if > - &gt;
+  //if " -  &quot;
+  //if ' - &apos;
+  }
+  result = result.join("")
+  return result;
 }
 
 convertHTML("Dolce & Gabbana");
