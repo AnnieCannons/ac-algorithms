@@ -8,10 +8,36 @@
 
 //sumTwoAnd(3) returns 5.
 
-//If either argument isn't a valid number, return undefined.
+//If either argument isn't a valid number , return undefined.
 
 function addTogether() {
- //your code here
+ var result;
+ var argA = arguments[0];
+ var argB = arguments[1];
+ if (arguments.length === 2) {
+    if (typeof argA !== "number" || typeof argB !== "number") { 
+      return undefined;
+    } 
+    else {
+        result = argA + argB;
+    }
+ } 
+ else {
+     if (typeof argA !== "number") { 
+       return undefined;
+     } 
+     else {
+         return function(key) {
+             if (typeof key !== "number") { 
+               return undefined;
+             } else {
+                 result = key + argA;
+             }
+         };
+     } 
+ }
+  console.log(result);
+     return result;
 }
 
 addTogether(2,3);

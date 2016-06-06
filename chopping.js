@@ -12,7 +12,7 @@
 
 function chopper(arr, howMany) {
   // slice array
-  var newArr = arr.slice((howMany), arr.length);
+  var newArr = arr.slice(howMany, arr.length);
   return newArr;
 }
 
