@@ -1,7 +1,9 @@
 /* Given an input number a, write a function simpleAdding(a)
 that calculates the sum of all numbers 
 from 0 to a, a included.
- - If a is a negative number return 0.
+ - If a is a negative number return 0. */
+
+ /*
 
  function simpleAdding(a) {
 	var answer = 0;
@@ -56,6 +58,7 @@ console.log(result); // 21
 **/
 
 function simpleAdding(a) {
+
 	
 	var answer = 0;
 	for (i=0 ; i <= a; i++) {
@@ -65,3 +68,4 @@ function simpleAdding(a) {
 	return answer;
  }
 //the answer to the first one worked for all of them!!!
+

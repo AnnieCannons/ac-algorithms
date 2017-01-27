@@ -38,6 +38,7 @@ console.log(result) // -1
 
 **/
 
+
 //without bonus:
 
 function getReadableTime(minutes) {
@@ -88,3 +89,4 @@ function getReadableTime(minutes) {
 
 		return clock;
 	}	
+
